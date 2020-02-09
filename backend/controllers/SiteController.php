@@ -1,11 +1,13 @@
 <?php
 namespace backend\controllers;
 
+use common\models\User;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use common\models\MF;
 
 /**
  * Site controller
@@ -28,7 +30,10 @@ class SiteController extends Controller
                     [
                         'actions' => ['logout', 'index'],
                         'allow' => true,
-                        'roles' => ['@'],
+                        'matchCallback' => function ($rule, $action) {
+                            return (!Yii::$app->user->isGuest &&
+                                    Yii::$app->user->identity->isAdmin());
+                        }
                     ],
                 ],
             ],

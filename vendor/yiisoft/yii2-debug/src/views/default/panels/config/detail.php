@@ -24,7 +24,7 @@ echo $this->render('table', [
         'Source Language' => !empty($app['sourceLanguage']) ? $app['sourceLanguage'] . $formatLanguage($app['sourceLanguage']) : '',
         'Charset' => !empty($app['charset']) ? $app['charset'] : '',
         'Environment' => $app['env'],
-        'Debug Mode' => $app['debug'] ? 'Yes' : 'No',
+        'MF Mode' => $app['debug'] ? 'Yes' : 'No',
     ],
 ]);
 

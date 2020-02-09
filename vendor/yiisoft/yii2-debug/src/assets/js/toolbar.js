@@ -342,12 +342,12 @@
             requestStack.push(stackElement);
             this.addEventListener('readystatechange', function () {
                 if (self.readyState === 4) {
-                    stackElement.duration = self.getResponseHeader('X-Debug-Duration') || new Date() - stackElement.start;
+                    stackElement.duration = self.getResponseHeader('X-MF-Duration') || new Date() - stackElement.start;
                     stackElement.loading = false;
                     stackElement.statusCode = self.status;
                     stackElement.error = self.status < 200 || self.status >= 400;
-                    stackElement.profile = self.getResponseHeader('X-Debug-Tag');
-                    stackElement.profilerUrl = self.getResponseHeader('X-Debug-Link');
+                    stackElement.profile = self.getResponseHeader('X-MF-Tag');
+                    stackElement.profilerUrl = self.getResponseHeader('X-MF-Link');
                     renderAjaxRequests();
                 }
             }, false);
@@ -385,12 +385,12 @@
                 };
                 requestStack.push(stackElement);
                 promise.then(function (response) {
-                    stackElement.duration = response.headers.get('X-Debug-Duration') || new Date() - stackElement.start;
+                    stackElement.duration = response.headers.get('X-MF-Duration') || new Date() - stackElement.start;
                     stackElement.loading = false;
                     stackElement.statusCode = response.status;
                     stackElement.error = response.status < 200 || response.status >= 400;
-                    stackElement.profile = response.headers.get('X-Debug-Tag');
-                    stackElement.profilerUrl = response.headers.get('X-Debug-Link');
+                    stackElement.profile = response.headers.get('X-MF-Tag');
+                    stackElement.profilerUrl = response.headers.get('X-MF-Link');
                     renderAjaxRequests();
 
                     return response;

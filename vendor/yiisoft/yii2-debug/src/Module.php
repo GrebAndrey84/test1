@@ -18,7 +18,7 @@ use yii\web\Response;
 use yii\web\View;
 
 /**
- * The Yii Debug Module provides the debug toolbar and debugger
+ * The Yii MF Module provides the debug toolbar and debugger
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
@@ -166,7 +166,7 @@ class Module extends \yii\base\Module implements BootstrapInterface
       *
       * ```php
       * ...
-      * 'pageTitle' => 'Custom Debug Title',
+      * 'pageTitle' => 'Custom MF Title',
       * ...
       * // OR
       * 'pageTitle' => function($url) {
@@ -336,9 +336,9 @@ class Module extends \yii\base\Module implements BootstrapInterface
             'tag' => $this->logTarget->tag,
         ]);
         $event->sender->getHeaders()
-            ->set('X-Debug-Tag', $this->logTarget->tag)
-            ->set('X-Debug-Duration', number_format((microtime(true) - YII_BEGIN_TIME) * 1000 + 1))
-            ->set('X-Debug-Link', $url);
+            ->set('X-MF-Tag', $this->logTarget->tag)
+            ->set('X-MF-Duration', number_format((microtime(true) - YII_BEGIN_TIME) * 1000 + 1))
+            ->set('X-MF-Link', $url);
     }
 
     /**
