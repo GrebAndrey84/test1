@@ -118,3 +118,31 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.tree{
+    background-image: url("../img/tree.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    width:700px;
+    border: 1px red solid;
+    margin: auto auto;
+}
+
+.tree td{
+    height: 90px;
+}
+
+.apple{
+    background-image: url("../img/apple.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70px;
+    width:70px;
+    border: 1px green solid;
+
+}
+
+

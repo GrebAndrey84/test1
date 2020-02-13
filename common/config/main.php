@@ -10,13 +10,12 @@ return [
             'class' => 'yii\caching\FileCache',
         ],
 
-//        'urlManager' => [
-//            'enablePrettyUrl' => true,
-//            'showScriptName' => false,
-//            'enableStrictParsing' => false,
-//            'rules' => [
-//            ],
-//        ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+            ],
+        ],
 
     ],
 ];

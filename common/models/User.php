@@ -214,4 +214,13 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return $this->admin?true:false;
     }
+
+    public static function getStatus()
+    {
+        return array(
+            self::STATUS_DELETED => 'Удалена',
+            self::STATUS_INACTIVE => 'Блокирована',
+            self::STATUS_ACTIVE => 'Активна',
+        );
+    }
 }
