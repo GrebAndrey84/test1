@@ -119,19 +119,31 @@ a.desc:after {
     outline: none;
 }
 
-.tree{
-    background-image: url("../img/tree.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 80vh;
-    width:700px;
-    border: 1px red solid;
-    margin: auto auto;
+div.funcs {
+    width: 90px;
+    float: left;
 }
 
+.borders {border: 1px solid red;}
+
+.tree{
+    background-image: url("../img/tree_s.jpg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 83vh;
+    width:700px;
+    margin-left: 90px;
+    float: none;
+}
+
+/*.tree table.appleOnTree {*/
+    /*margin-top: 15px;*/
+/*}*/
+
 .tree td{
-    height: 90px;
+    height: 78px;
+    width: 80px;
 }
 
 .apple{
@@ -139,10 +151,23 @@ a.desc:after {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 70px;
-    width:70px;
-    border: 1px green solid;
-
+    height: 90px;
+    width:90px;
+    cursor: pointer;
 }
 
-
+.funcs input[type="color"] {
+    border: none;
+    display: inline-block;
+    width:90px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+div.appleOntree {
+    height: 100%;
+    background-image: url("../img/apple.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}

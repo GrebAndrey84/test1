@@ -74,7 +74,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('apple');
+        return $this->render('index');
     }
 
     /**

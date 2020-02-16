@@ -9,11 +9,11 @@
     <div class="tree">
         <table class="appleOnTree" border="1" align="center">
             <?php for($i=0;$i<7;$i++):?>
-                <tr>
+            <tr>
                 <?php for($j=1;$j<8;$j++):?>
-                   <td id="<?=$i*10+$j?>"></td>
+                    <td id="t<?=$i*10+$j?>"></td>
                 <?php endfor;?>
-                </tr>
+            </tr>
             <?php endfor;?>
         </table>
     </div>
