@@ -67,7 +67,6 @@ class Apple extends ActiveRecord
         $this->creationDate = rand(10000000,time());
         $this->status = self::STATUS_ON_TREE;
         $this->position = self::FreePositionOnTree();
-        MF::db($this->position);
         $this->save();
     }
 
@@ -76,9 +75,7 @@ class Apple extends ActiveRecord
         foreach ($busyPos = self::find()->select('position')->asArray()->all() as $k=>$v)
             $busyPos[$k] = $v['position'];
         $freePos = array_diff(self::POSITION,$busyPos);
-        MF::db($busyPos);
-        MF::db($freePos);
-        return $freePos?$freePos[rand(0,count($freePos))]:false;
+        return $freePos?$freePos[array_rand($freePos)]:false;
     }
 
 

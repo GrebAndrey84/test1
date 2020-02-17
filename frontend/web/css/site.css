@@ -164,10 +164,16 @@ div.funcs {
     cursor: pointer;
 }
 div.appleOntree {
-    height: 100%;
-    background-image: url("../img/apple.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
+    /*height: 100%;*/
+    /*background-image: url("../img/apple.jpg");*/
+    /*background-size: contain;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    /*cursor: pointer;*/
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    border: 1px solid red;
+    margin: auto auto;
+
 }

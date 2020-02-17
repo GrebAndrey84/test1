@@ -61,7 +61,7 @@ class AppleController extends Controller
         {
             $apple = new Apple($data['color']);
 
-            return $apple?json_encode(array('success'=>1,'id'=>$apple->id,'position'=>$apple->position)):json_encode(array('success'=>0,'message'=>'Ошибка сохранения данных'));
+            return ($apple && $apple->id)?json_encode(array('success'=>1,'id'=>$apple->id,'position'=>$apple->position)):json_encode(array('success'=>0,'message'=>'Ошибка сохранения данных'));
         }
     }
 }
