@@ -60,19 +60,21 @@ class Apple extends ActiveRecord
         ];
     }
 
-    public function __construct($color, array $config = [])
+    public function __construct($color=null, array $config = [])
     {
         parent::__construct($config);
-        $this->color = $color;
-        $this->creationDate = rand(10000000,time());
-        $this->status = self::STATUS_ON_TREE;
-        $this->position = self::FreePositionOnTree();
-        $this->save();
+        if($color){
+            $this->color = $color;
+            $this->creationDate = rand(10000000,time());
+            $this->status = self::STATUS_ON_TREE;
+            $this->position = self::FreePositionOnTree();
+            $this->save();
+        }
     }
 
     public static function FreePositionOnTree()
     {
-        foreach ($busyPos = self::find()->select('position')->asArray()->all() as $k=>$v)
+        foreach ($busyPos = self::find()->select('position')->where(['status'=>self::STATUS_ON_TREE])->asArray()->all() as $k=>$v)
             $busyPos[$k] = $v['position'];
         $freePos = array_diff(self::POSITION,$busyPos);
         return $freePos?$freePos[array_rand($freePos)]:false;

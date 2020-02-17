@@ -52,7 +52,8 @@ class AppleController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $apples = Apple::find()->all();
+        return $this->render('index',['apples'=>$apples]);
     }
 
     public function actionCreate()
@@ -61,7 +62,7 @@ class AppleController extends Controller
         {
             $apple = new Apple($data['color']);
 
-            return ($apple && $apple->id)?json_encode(array('success'=>1,'id'=>$apple->id,'position'=>$apple->position)):json_encode(array('success'=>0,'message'=>'Ошибка сохранения данных'));
+            return ($apple && $apple->id)?json_encode(array('success'=>1,'id'=>$apple->id,'position'=>$apple->position,'color'=>$apple->color)):json_encode(array('success'=>0,'message'=>'Ошибка сохранения данных'));
         }
     }
 }

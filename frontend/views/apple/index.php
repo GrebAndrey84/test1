@@ -11,7 +11,11 @@
             <?php for($i=0;$i<7;$i++):?>
             <tr>
                 <?php for($j=1;$j<8;$j++):?>
-                    <td id="t<?=$i*10+$j?>"></td>
+                    <td id="t<?=$i*10+$j?>">
+                        <?php foreach($apples as $apple):?>
+                            <?=($apple->position==$i*10+$j)?"<div class='appleOntree' data-id=$apple->id style='background-color:$apple->color'></div>":"";?>
+                        <?php endforeach;?>
+                    </td>
                 <?php endfor;?>
             </tr>
             <?php endfor;?>

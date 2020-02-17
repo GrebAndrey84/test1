@@ -13,7 +13,8 @@ $("#newApple").on('click',function () {
         {
             pos = data['position'];
             id = data['id'];
-            $("#t"+pos).html("<div class='appleOntree' data-id='"+id+"'></div>");
+            color = data['color'];
+            $("#t"+pos).html("<div class='appleOntree' data-id='"+id+"' style='background-color:"+color+"'></div>");
             console.log("position="+pos);
             console.log("id="+id);
         }

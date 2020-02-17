@@ -173,7 +173,7 @@ div.appleOntree {
     width: 50%;
     height: 50%;
     border-radius: 50%;
-    border: 1px solid red;
     margin: auto auto;
-
+    border-width: 1px;
+    border-style: solid;
 }
