@@ -24,3 +24,11 @@ $("#newApple").on('click',function () {
     });
 
 });
+
+$(".appleOntree").on('click',function () {
+    // var fid = $(this).data('id');
+    // console.log(fid);
+    // $("#t"+fid).html("<div class='appleForm'></div>");
+    $(".appleForm").remove();
+    $(this).parent().append("<div class='appleForm'></div>");
+});
