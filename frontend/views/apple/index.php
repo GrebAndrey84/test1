@@ -1,6 +1,6 @@
 <?php
 use frontend\components\appleWidget;
-
+$this->title = 'apple';
 ?>
 <div>
     <div class="funcs">
