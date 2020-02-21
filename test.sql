@@ -24,32 +24,14 @@ CREATE TABLE IF NOT EXISTS `apple` (
   `creationDate` int(11) NOT NULL,
   `fallTime` int(11) DEFAULT NULL,
   `status` tinyint(2) NOT NULL DEFAULT '5',
-  `condition` tinyint(1) DEFAULT NULL,
   `size` tinyint(3) NOT NULL DEFAULT '100',
   `position` tinyint(3) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=188 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы test.apple: ~16 rows (приблизительно)
+-- Дамп данных таблицы test.apple: ~0 rows (приблизительно)
 DELETE FROM `apple`;
 /*!40000 ALTER TABLE `apple` DISABLE KEYS */;
-INSERT INTO `apple` (`id`, `color`, `creationDate`, `fallTime`, `status`, `condition`, `size`, `position`) VALUES
-	(72, '#000000', 1119419523, NULL, 1, NULL, 100, 27),
-	(73, '#000000', 1322918221, NULL, 1, NULL, 100, 15),
-	(74, '#000000', 430849728, NULL, 1, NULL, 100, 5),
-	(75, '#000000', 1306624957, NULL, 1, NULL, 100, 32),
-	(76, '#000000', 165464576, NULL, 1, NULL, 100, 35),
-	(77, '#000000', 545258990, NULL, 1, NULL, 100, 3),
-	(78, '#000000', 1083350182, NULL, 1, NULL, 100, 13),
-	(79, '#000000', 129283558, NULL, 1, NULL, 100, 24),
-	(80, '#000000', 27637802, NULL, 1, NULL, 100, 36),
-	(81, '#000000', 132027056, NULL, 1, NULL, 100, 34),
-	(82, '#000000', 1122808505, NULL, 1, NULL, 100, 33),
-	(83, '#000000', 1572761027, NULL, 1, NULL, 100, 14),
-	(84, '#000000', 144526628, NULL, 1, NULL, 100, 12),
-	(85, '#000000', 341803933, NULL, 1, NULL, 100, 22),
-	(86, '#000000', 69151032, NULL, 1, NULL, 100, 4),
-	(87, '#000000', 581052824, NULL, 1, NULL, 100, 23);
 /*!40000 ALTER TABLE `apple` ENABLE KEYS */;
 
 -- Дамп структуры для таблица test.migration
@@ -60,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `migration` (
   PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы test.migration: ~3 rows (приблизительно)
+-- Дамп данных таблицы test.migration: ~2 rows (приблизительно)
 DELETE FROM `migration`;
 /*!40000 ALTER TABLE `migration` DISABLE KEYS */;
 INSERT INTO `migration` (`version`, `apply_time`) VALUES
@@ -109,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `migration` (
   PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы test_test.migration: ~3 rows (приблизительно)
+-- Дамп данных таблицы test_test.migration: ~2 rows (приблизительно)
 DELETE FROM `migration`;
 /*!40000 ALTER TABLE `migration` DISABLE KEYS */;
 INSERT INTO `migration` (`version`, `apply_time`) VALUES
