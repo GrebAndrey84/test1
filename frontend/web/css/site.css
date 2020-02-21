@@ -179,11 +179,14 @@ div.appleOntree {
 }
 
 .appleForm{
-    border: 1px solid red;
-    width: 50px;
+    width: 55px;
     height: 100px;
-    background-color: green;
     position: absolute;
-    left: 50px;
+    margin-top: -75px;
+    margin-left: 70px;
 
+}
+
+.appleForm input{
+    width:50px;
 }

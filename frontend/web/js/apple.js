@@ -26,9 +26,23 @@ $("#newApple").on('click',function () {
 });
 
 $(".appleOntree").on('click',function () {
-    // var fid = $(this).data('id');
-    // console.log(fid);
-    // $("#t"+fid).html("<div class='appleForm'></div>");
+
+    var id = $(this).data('id');
+    var status = $(this).data('status');
+    var size = $(this).data('size');
+    var condition = $(this).data('condition');
+
     $(".appleForm").remove();
-    $(this).parent().append("<div class='appleForm'></div>");
+    event.stopPropagation();
+    $(this).parent().append("<div class='appleForm' align='center'><div><span class='glyphicon glyphicon-apple' title='упасть'></span></div><div><input type='number' value='"+size+"' min='0' max='"+size+"'><span class='glyphicon glyphicon-adjust' title='съесть'></span></div></div>");
 });
+
+$(".container").on('click',function () {
+    $(".appleForm").remove();
+});
+
+$(".tree").on('click','div', function () {
+    event.stopPropagation();
+});
+
+

@@ -16,7 +16,7 @@ use frontend\components\appleWidget;
                 <?php for($j=1;$j<8;$j++):?>
                     <td id="t<?=$i*10+$j?>">
                         <?php foreach($apples as $apple):?>
-                            <?=($apple->position==$i*10+$j)?"<div class='appleOntree' data-id=$apple->id style='background-color:$apple->color'></div>"/*.appleWidget::widget(['id' =>$apple->id])*/:"";?>
+                            <?=($apple->position==$i*10+$j)?"<div class='appleOntree' data-id=$apple->id data-status=$apple->status data-size=$apple->size data-condition='$apple->condition' style='background-color:$apple->color'></div>":"";?>
 
                         <?php endforeach;?>
                     </td>
